@@ -41,7 +41,7 @@ public class UserController {
 	
 	@CrossOrigin
 	  @RequestMapping(method=RequestMethod.POST, value="app/addemp")
-	    public String save(@RequestBody empDetails empDetails) {
+	    public empDetails save(@RequestBody empDetails empDetails) {
 	      
 		  
 		  
@@ -49,7 +49,7 @@ public class UserController {
 		  
 		  empService.saveEmp(empDetails);
 		  
-	        return "OK";
+	        return empDetails;
 	    }
 	
 	
